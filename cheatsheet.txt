@@ -1,0 +1,10 @@
+ls
+cd ..
+cd punch2475-cmis
+gedit _____ &
+git status
+git add 
+git commit -m "Added content to___" 
+git add ___
+git push
+gedit ___ 
