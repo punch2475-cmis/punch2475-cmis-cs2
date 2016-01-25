@@ -1,10 +1,17 @@
-ls
-cd ..
-cd punch2475-cmis
-gedit _____ &
+
+ls - list 
+ls + res 
+cd username - move to the folder 
+cd .. back to home 
+
+gedit ______ & = to folder
+
 git status
-git add 
-git commit -m "Added content to___" 
+git add ___ 
+
+git commit -m “___”
 git add ___
-git push
-gedit ___ 
+git push 
+
+gedit ___ =create
+
