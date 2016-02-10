@@ -20,7 +20,10 @@ def div(a,b):
 print div(2,3.0)
 
 def divhrs(a,b):
-	b=60
 	return a/b
 
-print 86400/b
+print divhrs(86400,3600)
+
+def rsphere(a,b)
+	return (
+
