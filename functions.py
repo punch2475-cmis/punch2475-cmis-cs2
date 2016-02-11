@@ -24,6 +24,26 @@ def divhrs(a,b):
 
 print divhrs(86400,3600)
 
-def rsphere(a,b)
-	return (
+def area(a):
+	return math.pi* a **2
+
+print area(5)
+
+def volume(a):
+	return ((4/3.0)*math.pi)*a**3)
+
+print volume(5)
+
+def avgvol(a,b): 
+	return (volume(a)+volume(b))/2
+
+print avgvol(5.0,10.0)
+
+def areatri(a,b,c):
+	return ((1/2.0)a*b*sin*c)
+
+print areatri (1,2,2.5)
+
+	
+
 
