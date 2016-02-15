@@ -39,12 +39,23 @@ def avgvol(a,b):
 
 print avgvol(5.0,10.0)
 
-def areatri(a,b,c):
-	s=(a+b+c)/2
-	s1
+def area (a, b, c):
+	return math.sqrt (2.75*(2.75-a)*(2.75-b)*(2.75-c))
+	
+print area (1.0, 2.0, 2.5)
+
+def right_align(word):
+	return str ((80-len(word))*" " + word)
+	
+print right_align("Hello")
+
+def center(term):
+	return str ((40-len(term))*" " + term) 
+	
+print center ("Hello")
 	
 def msg_box(word):
-	return "+"+((len(word)+ 4)*"-") +"+"+ "\n" + "|" + (2*" ") + (word) +(2* " ")+ "|" + "\n" + "+" + ((len(word))+ 4)*"-") +"+"+ "\n" + "|" + (2*" ")
+	return "+" + ((len(word)+ 4)*"-") + "+" + "\n" + "|" + (2*" ") + (word) + (2*" ") + "|" + "\n" + "+" + ((len(word)+ 4)*"-") + "+"
 	
 print msg_box("Hello")
 print msg_box("I eat cats!")
