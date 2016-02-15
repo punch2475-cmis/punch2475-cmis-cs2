@@ -40,10 +40,14 @@ def avgvol(a,b):
 print avgvol(5.0,10.0)
 
 def areatri(a,b,c):
-	return ((1/2.0)a*b*sin*c)
-
-print areatri (1,2,2.5)
-
+	s=(a+b+c)/2
+	s1
+	
+def msg_box(word):
+	return "+"+((len(word)+ 4)*"-") +"+"+ "\n" + "|" + (2*" ") + (word) +(2* " ")+ "|" + "\n" + "+" + ((len(word))+ 4)*"-") +"+"+ "\n" + "|" + (2*" ")
+	
+print msg_box("Hello")
+print msg_box("I eat cats!")
 	
 
 
