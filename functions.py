@@ -30,14 +30,12 @@ def area(a):
 print area(5)
 
 def volume(a):
-	return ((4/3.0)*math.pi)*a**3)
-
+	return 1.33333333333 * math.pi * (a**3)
 print volume(5)
 
-def avgvol(a,b): 
-	return (volume(a)+volume(b))/2
-
-print avgvol(5.0,10.0)
+def avg_volume (a, b):
+	 return ((1.0/6 * math.pi * a**3) + (1.0/6 * math.pi * b**3)) /2
+print avg_volume(10, 20)
 
 def area (a, b, c):
 	return math.sqrt (2.75*(2.75-a)*(2.75-b)*(2.75-c))
