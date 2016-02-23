@@ -29,12 +29,12 @@ def area(a):
 
 print area(5)
 
-def volume(a):
-	return 1.33333333333 * math.pi * (a**3) #
+def volume(radius):
+	return 1.33333333333 * math.pi * (radius**3) #
 print volume(5)
 
-def avg_volume (a, b):
-	 return ((1.0/6 * math.pi * a**3) + (1.0/6 * math.pi * b**3)) /2
+def avg_volume (diameter1, diameter2):
+	 return  
 print avg_volume(10, 20)
 
 def area2 (a, b, c):
@@ -69,7 +69,22 @@ h=avg_volume(10, 20)
 i=area2(1.0, 2.0, 2.5)
 j=right_align("Hello")
 k=center ("Hello")
+l=msg_box("Hello")
+m=msg_box("I eat cats!")
 
+ab=add(3,4)
+cd=sub(5,3)
+ef=mul(4,4)
+gh=div(2,3.0)
+ij=divhrs(86400,3600)
+kl=area(5)
+mn=volume(5)
+op=avg_volume(10, 20)
+qr=area2(1.0, 2.0, 2.5)
+p=right_align("Hello")
+z=center ("Hello")
+x=msg_box("Hello")
+y=msg_box("I eat cats!")
 
 print msg_box(str(a))
 print msg_box(str(b))
@@ -82,6 +97,21 @@ print msg_box(str(h))
 print msg_box(str(i))
 print msg_box(j)
 print msg_box(k)
+print l
+print m
+print msg_box(str(ab))
+print msg_box(str(cd))
+print msg_box(str(ef))
+print msg_box(str(gh))
+print msg_box(str(ij))
+print msg_box(str(kl))
+print msg_box(str(mn))
+print msg_box(str(op))
+print msg_box(str(qr))
+print msg_box(p)
+print msg_box(z)
+print x
+print y
 
 
 

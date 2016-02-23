@@ -1,20 +1,18 @@
 import math
-def output(hyp,sleg,lleg):
-	out="""
-Your
-
-
-
-""".format(hyp,sleg,lleg)
-	return out 
-
+def sineratio(oppleg,hyp):
+	return oppleg/hyp
 
 def main():
-	hyp=raw_input("Your hypotheuse length")
-	sleg=raw_input("Your short leg length")
-	lleg=raw_input("Your long leg length")
+	oppleg= raw_input("Your opposite leg length:")
+	hyp= raw_input ("Your hypotenuse leg length:")
+	sine= sinediv(float(oppleg),float(hyp))
+
+	print sine
+
+main()
+	
 	
 
 
-def sine(oppleg,hyp):
-	return oppleg/hyp
+
+
