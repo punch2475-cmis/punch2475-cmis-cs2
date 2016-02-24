@@ -34,14 +34,16 @@ def volume(radius):
 print volume(5)
 
 def avg_volume (diameter1, diameter2):
-	 return  
+    vsphere1=volume(diameter1/2)
+    vsphere2=volume(diameter2/2)
+    return (vsphere1+vsphere2)/2
 print avg_volume(10, 20)
 
 def area2 (a, b, c):
 	return math.sqrt (2.75*(2.75-a)*(2.75-b)*(2.75-c))
 	
 print area2 (1.0, 2.0, 2.5)
-
+    
 def right_align(word):
 	return str ((80-len(word))*" " + word)
 	
