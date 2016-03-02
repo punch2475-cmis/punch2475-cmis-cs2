@@ -17,7 +17,7 @@
 #	2: interger int(787),int(6768)
 #	3: float float(8.8),float(6697.09)
 #	4: string str(Punch), str(ajkfj)
-#	5: tuple
+#	5: tuple ("Punch",67,7.7)("PPP",899,768.9)
 #
 #5 2pts) What is the difference between a "function definition" and a 
 #        "function call"?
