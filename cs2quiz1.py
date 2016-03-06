@@ -16,7 +16,7 @@
 #	1: boolean bool("Punch"), bool(45678)
 #	2: interger int(787),int(6768)
 #	3: float float(8.8),float(6697.09)
-#	4: string str(Punch), str(ajkfj)
+#	4: string str(Punch), str(567)
 #	5: tuple ("Punch",67,7.7)("PPP",899,768.9)
 #
 #5 2pts) What is the difference between a "function definition" and a 
@@ -27,7 +27,7 @@
 #        each of them
 #	1: Input:insert the value
 #	2: Processing: the computer perform calculation
-#	3: Output: give output or result and end the process
+#	3: Output: give output or result 
 #
 #Part 2: Programming (25 points)
 #Write a program that asks the user for the areas of 3 circles.
