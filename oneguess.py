@@ -1,32 +1,31 @@
 import random
-import math
 
-def dif(targetNumber, rd):
-    return abs(targetNumber-rd) 
+def guess():
+	import random
+	minimum_num = int(raw_input("What is the minimum value?"))
+	maximum_num = int(raw_input("What is the maximum value?"))
+	rd = random.randint(minimum, maximum)
+	print "I am thinking of a number between", minimum, "and", maximum
+	guess = int(raw_input("What do you think it is?"))
+	difference = abs(guess - rd)
 
-def output(): 
-    out="""
-What is the minimum number? {}
-What is the maximum number? {}
-I thinking of a number from {} to {}
-What do you think it is? {}
-
+	if guess == rd:
+		print """
 The target was {}
 Your guess was {}
-""". format(mininumber,maxnumber,mininumber,maxnumber,rd,targetNumber,rd)
-
-def main():
-	mininumber= raw_input("What is the minimum number?")
-    maxnumber= raw_input ("What is the maximum number?")
-    rd= raw_input ("What do you think it is?")
-
-    targetNumber= random.randint(mininumber,maxnumber)
-    if targetNumber = rd 
-        print ":)"
-    else 
-        print dif
-
-main()
-
-
-    
+That is correct! You must be a phychic!
+""".format(random, guessnumber)
+	elif guess > rd:
+		print """
+The target was {}
+Your guess was {}
+That's over by {}
+""".format(random, guessnumber, difference)
+	elif guessnumber < random:
+		print """
+The target was {}
+Your guess was {}
+That's under by {}
+""".format(random, guessnumber, difference)
+	
+guess()
