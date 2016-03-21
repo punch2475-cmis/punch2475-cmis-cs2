@@ -6,23 +6,23 @@ def  cal(legA, legB):
 	return math.sqrt((legA)**2+(legB)**2)
 
 
-def output(legA,legB,legC):
-  out = """
-Solve triangle
+def output(Name,legA,legB,legC):
+	out = """
+Hello {}, This program will help you solve triangle by using pythagorean theorem.
 Shortest length of your triangle is{}
 Second longest length of your triangle is {}
 So your hypotenuse is {}
-""". format(legA,legB,legC)
-  return out
+""". format(Name,legA,legB,legC)
+	return out
 
 def main():
-  legA=raw_input("shortest length:")
-  legB= raw_input("second longest length:")
-  legC= cal(float(legA),float(legB))
+	Name= raw_input("What is your name?:")
+	legA=raw_input("shortest length:")
+	legB= raw_input("second longest length:")
+	legC= cal(float(legA),float(legB))
 	
-
-  p=output(legA,legB,legC)
-  print p 
+	p=output(Name,legA,legB,legC)
+	print p 
 
 main()
 
