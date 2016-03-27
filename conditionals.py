@@ -68,10 +68,10 @@ c. I love it
 def schoolgrade():
     schoolgrade("""
 What is your current grade?
-a. A-B
-b. C
-c. D
-e. F
+a. F
+b. D
+c. C
+e. A-B
 (type a,b,c,e):
             """)
     if schoolgrade == "a"
@@ -80,5 +80,7 @@ e. F
         return 2
     if schoolgrade == "c"
         return 3
-    if schoolgrade == "F"
+    if schoolgrade == "e"
         return 4
+def output():
+    
