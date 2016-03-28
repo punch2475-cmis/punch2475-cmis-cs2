@@ -1,9 +1,10 @@
-#Future 
+#Future job
 
 def main():
     name= raw_input ("What is your name?")
     age= raw_input("How old are you?")
     grade= raw_input ("Grade:")
+    sumOfeverything= subject + studyyears + reading + schoolgrade
     
 def subject():
     subject= ("""
@@ -82,5 +83,15 @@ e. A-B
         return 3
     if schoolgrade == "e"
         return 4
+def homework():
+
+
 def output():
+	out="""
+Hello {}, you are {} years old. You are in grade {}.
+From the quiz that you take, your future job is going to be {}.
+""". format(name,age,grade)
+    return out
+
+
     
