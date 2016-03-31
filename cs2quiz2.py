@@ -53,7 +53,7 @@ def trueexpression(a,b,c): #check the greatest number
         return b
     elif c > a and c > b:
         return c
-    else a == b and b == c:
+    else: 
         return false
         
 def main():
