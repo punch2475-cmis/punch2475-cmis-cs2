@@ -1,16 +1,16 @@
 #PART 1: Terminology
 #1) Give 3 examples of boolean expressions.
-#a) 3=3 and 4=4
-#b) 5=5 or 5*4*2=40
-#c) 5*6*3=/5*6*4 not 3*2*5=56
+#a) 398 < 100*40+5
+#b) 5 > 3*2-5
+#c) 76 >= 3*4*4
 #
 #2) What does 'return' do?
 # The keyword "return" the job is to spitting the value.
 #
 #
 #3) What are 2 ways indentation is important in python code?
-#a)
-#b)
+#a) Indentation tells where the function definition begins and ends.
+#b) Indentation also tells the function what to spit value, if the statement is true.
 #
 #
 
@@ -18,7 +18,7 @@
 #Type the values for 9 of the 12 of the variables below.
 #
 #problem1_a) 36
-#problem1_b) square root 3
+#problem1_b) -square root 3
 #problem1_c) 0
 #problem1_d) -5
 #
@@ -46,28 +46,31 @@
 #the directions.
 #Be sure to use the program structure you've learned (main function, processing function, output function)
 
- 
+def trueexpression(a,b,c): #check the greatest number
+    if a > b and a > c: 
+        return a
+    elif b > a and b > c:
+        return b
+    elif c > a and c > b:
+        return c
+    else a == b and b == c:
+        return false
+        
 def main():
     print "Type in 3 different numbers (decimals are Ok!)" 
     a= float(raw_input("A:"))
     b= float(raw_input ("B:"))
     c= float(raw_input ("C:"))
-    print output()
+    
+    statement = trueexpression(a,b,c)
+    
+    print output(statement)
 
-def output():
-    if a > b and a > c: 
-      print """
-The largest number is {}.
-""". format(a)
-    elif b > a and b > c:
-      print """
-The largest number is {}.
-""". format(b)
-    elif c > a and c > b:
-      print """
-The largest number is {}.
-""". format(c)
-    elif a == b and b == c:
-        print "You didn't follow the directions!"
+def output(statement):
+  if statement == False:
+      return "You didn't follow instructions"
+  else:
+      return "The largest number is {}". format(statement)
+     
 
 main()
