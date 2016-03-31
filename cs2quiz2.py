@@ -54,7 +54,7 @@ def trueexpression(a,b,c): #check the greatest number
     elif c > a and c > b:
         return c
     else: 
-        return false
+        return False
         
 def main():
     print "Type in 3 different numbers (decimals are Ok!)" 
