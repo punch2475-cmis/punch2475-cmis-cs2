@@ -1,31 +1,44 @@
 #Future major and GPA
-def cal:
-    return 
+def calA(a,b,c,d,e):
+    return a+b+c+d+e
 
 def main():
     name= raw_input ("What is your name?")
     age= raw_input("How old are you?")
     grade= raw_input ("Grade:")
-    sumOfeverything= cal(studyyears,reading,schoolgrade,homework,character)
+    subjectA= subject()
+    print subjecta
+    study= studyyears()
+    print study
+    read= reading()
+    print read
+    gradeA= schoolgrade()
+    print gradeA
+    hw= homework()
+    print hw
+    personality= character()
+    print personality
+    sum1= calA(subjectA,study,read,gradeA,hw,personality)
     
-def GPA():
-    if sumOfeverything >= 6:
+    
+def GPAa():
+    if sum1 >= 6 <=0:
         print "2.0"
-    if sumOfeverything >= 7 <= 12:
+    if sum1 >= 7 <= 12:
         print "2.4 - 2.9"
-    if sumOfeverything >= 13 <= 19:
+    if sum1>= 13 <= 19:
         print "3.0-3.4"
-    if sumOfeverything >= 20 <= 25:
+    if sum1 >= 20 <= 25:
         print "3.5-4.0"
-    return GPA
+    return GPAa
 
 def randomGPA():
     rdGPA = random.randint(2.0,4.0)
-    rGPA = float(rdGPA+ GPA)/2
+    rGPA = float(rdGPA+ GPAa)/2
 
 
 def subject():
-    subject= ("""
+    subject= raw_input("""
 What subject do you like?
 a. math
 b. science
@@ -49,7 +62,7 @@ f. economic
         return 6
 
 def studyyears():
-    studyyears= ("""
+    studyyears= raw_input ("""
 How many years you want to study?
 a. less than 3
 b. 3
@@ -70,7 +83,7 @@ e. 6
         return 5
 
 def reading():
-    reading= ("""
+    reading= raw_input("""
 How do you feel about reading?
 a. I hate it
 b. It's okay
@@ -85,7 +98,7 @@ c. I love it
         return 3
 
 def schoolgrade():
-    schoolgrade("""
+    schoolgrade= raw_input("""
 What is your current grade?
 a. F
 b. D
@@ -103,7 +116,7 @@ e. A-B
         return 4
 
 def homework():
-    homework("""
+    homework=raw_input("""
 How often did you finish homework?
 a. Never
 b. Rarely
@@ -118,7 +131,7 @@ c. Always
         return 3
 
 def character():
-    character("""
+    character=raw_input("""
 Which of these character best suit for you?
 a. I'm not organized
 b. I'm very organized
@@ -129,11 +142,11 @@ b. I'm very organized
     if character == "b":
         return 2
 def job ():
-    if sumOfeverthing >= 10 
+    if sumOfeverthing >= 10:
         print "you can study in major __________"
-    if sumOfeverything >= 11 <= 19
+    if sumOfeverything >= 11 <= 19:
         print "you can study in major __________"
-    if sumOfeverything >= 20 <= 24
+    if sumOfeverything >= 20 <= 24:
         print "you can study in major __________"
 
 def output():
@@ -141,7 +154,7 @@ def output():
 Hello {}, you are {} years old. You are in grade {}. 
 From the quiz that you take, your future job is going to be {}. Also you will graduate with GPA {}. 
 """. format(name,age,grade)
-   if sumOfeverything <= 10:
+    if sum1 >=6:
         print """
 Hello {}, you are {} years old.
 You are in grade {}.
