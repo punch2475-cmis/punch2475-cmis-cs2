@@ -1,16 +1,26 @@
 def avg(a,b,c,d,e):
-    return (a+b+c+d+e)/2
+    return ((a+b+c+d+e)/5)
 
 def range0(a):
     if a <0.0 or a>10.0:
-        print a, "is out of range"
-    
-def output(avg1,avg12):
+        print a, "is out of range" 
+        return a==0
+
+def oddeven(b):
+    if b ==1 or b ==3 or b ==5 or b==7 or b==9:
+        return "odd"
+    else:
+        return "even"
+    print oddeven
+
+
+  
+def output(avg1,intpart,oddeven1):
     out=""" 
 The average is {}.
 The interger part of the average is {}.
 The interger part is {}.
-""".format(avg1,avgfirst)
+""".format(avg1,intpart,oddeven1)
     return out
     
 def main():
@@ -29,11 +39,13 @@ def main():
     n4= float(raw_input("n4:"))
     range00= range0(n4)
 
-    avg1= avg(n0,n1,n2,n3,n4)
-    avg12= int(avg1)
 
-    out= output(avg1,avg12)   
+    avg1= avg(n0,n1,n2,n3,n4)
+    intpart= int(avg1)
+    oddeven2= oddeven(int(avg1))
+    out= output(avg1,intpart,oddeven2)
     print out
+
 
 main()
  
