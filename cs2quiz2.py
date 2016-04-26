@@ -3,35 +3,35 @@
 #a) 398 < 100*40+5
 #b) 5 > 3*2-5
 #c) 76 >= 3*4*4
-#
+# correct +3 
 #2) What does 'return' do?
 # The keyword "return" the job is to spitting the value.
-#
+# correct +1
 #
 #3) What are 2 ways indentation is important in python code?
 #a) Indentation tells where the function definition begins and ends.
 #b) Indentation also tells the function what to spit value, if the statement is true.
-#
-#
+# 
+# +2
 
 #PART 2: Reading
 #Type the values for 9 of the 12 of the variables below.
 #
-#problem1_a) 36
+#problem1_a) -36
 #problem1_b) -square root 3
 #problem1_c) 0
 #problem1_d) -5
-#
+# +4
 #problem2_a) True
 #problem2_b) False
 #problem2_c) False
 #problem2_d) False
-#
+# +3
 #problem3_a) 0.3
 #problem3_b) 0.5
 #problem3_c) 0.5
 #problem3_d) 0.5
-#
+# +4
 #problem4_a)  7
 #problem4_b)  5
 #problem4_c)  0.125
@@ -74,3 +74,4 @@ def output(statement):
      
 
 main()
++1 +1 +1 +1 +1
