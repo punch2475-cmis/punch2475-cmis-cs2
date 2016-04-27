@@ -1,3 +1,17 @@
+def countup(n):
+	if n>=10:
+		print "Blastoff"
+	else:
+		print n
+		countup(n+1)
+
+def countdown(n):
+    if n<= 0:
+        print "Blastoff"
+    else:
+        print n
+        countdown(n-1)
+
 def countdown_from_to(start,stop):
     if start<stop:
         print "Blastoff"
@@ -13,9 +27,14 @@ def countup_from_to(start,stop):
         countup_from_to(start+1,stop)
         
 def adder():
-    print "Running Total:0"
-    b= raw_input("Next Number:")
+    n= raw_input("Next Number:")
+    if n =:
+        print "The total:"
+    else:
+        adder()
 
+    
+    
     
 
 def main():
