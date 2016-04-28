@@ -26,19 +26,29 @@ def countup_from_to(start,stop):
         print start
         countup_from_to(start+1,stop)
         
-def adder():
+def adder(runningnumber):
     n= raw_input("Next Number:")
-    if n =:
-        print "The total:"
+    if n != "":
+        print "Running total: ", runningnumber + float(n)
+        adder(runningnumber + float(n))
     else:
-        adder()
+        print "The sum is",runningnumber
 
+
+
+def biggest():
+    a= raw_input("Next Number:")
+
+    return biggest
     
     
+
+
     
 
 def main():
-    adder()
+    countup(56)
+    adder(0)
     return
 
 main()
