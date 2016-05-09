@@ -1,28 +1,16 @@
-  #samsung or apple best suit for you
 import random
 
 def main():
     Name= raw_input("Your name:")
     Gender = raw_input ("Your gender")
     phone= raw_input ("Your current phone:")
-	sp= smartphone()
-   
-	out= output
-	print out
+    sp= smartphone()
+    print sp
 
 
 def cal(a,b,c):
     return  a+b+c
 
-
-
-def output(name,gender,phone,smartphone2):
-    output="""
-Hello, {} 
-Your gender is {}
-Your current phone is{}
-From the quiz that you take, the best smartphone brand that suit you is{}.
-""". format(name,gender,phone,smartphone2)
     
 def smartphone():
 	afford= money()
@@ -30,16 +18,16 @@ def smartphone():
 	superRandom= random1()
 	calC= cal(afford,use,superRandom)
 	if calC <=2:
-		return "Nokia 3310"
-	if calC <=4:
-		return "Iphone6s"
-	if calC <= 6:
-		return "Samsung s7"
-	if calC <= 8:
-		return "Samsung a7"
-	if calC >= 100:
-		return "Samsung Note5"
-	if calC >=1000:
+		return "The phone that suit you is Nokia 3310"
+	elif calC <=4:
+		return "The phone that suit you is Iphone6s"
+	elif calC <= 6:
+		return "The phone that suit you is Samsung s7"
+	elif calC <= 8:
+		return "The phone that suit you is Samsung a7"
+	elif calC >= 100:
+		return "The phone that suit you is Samsung Note5"
+	elif calC >=1000:
 		return "Use whatever you want"
 
 def rely():
@@ -88,7 +76,7 @@ How do you want to calculate your result?
 a. use random to select your phone
 b. I don't care
 c. don't use random
-d. Do want ever you want
+d. Whatever
 (type a,b,c,d):
 		""")
 	if random1== "a":
@@ -106,5 +94,3 @@ d. Do want ever you want
 
 
 main()
-
-    
