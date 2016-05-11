@@ -114,8 +114,14 @@ d. a pattern
 	else:
 		return random.random()
 
-def 
-
+def random2():
+	if afford != use or use =! password
+		return random.randint(1,35)/3
+	if afford == use and use == password
+		return 5
+	if afford > use or use < password
+		return 10
+	
 def output(Name,phone,sp):
 	out = """
 Hello {}, 
