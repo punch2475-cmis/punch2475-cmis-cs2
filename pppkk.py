@@ -4,23 +4,20 @@
 import random
 
 def main():
-    Name= raw_input("Your name:")
-    phone= raw_input ("Your current phone:")
-    sp= smartphone()
-    p= output(Name,phone,sp)
-    print p
+	Name= raw_input("Your name:")
+	phone= raw_input("Your current phone:")
+	afford= money()
+	use= rely()
+	password= security()
+	superRandom= random1()
+	sp= smartphone()
+	calA= cal(afford,use,superRandom,password,randomA)
 
-
-def cal(a,b,c,d):
-    return  a+b+c+d
+def cal(afford,use,superRandom,password,randomA):
+    return  afford+use+superRandom+password+randomA
 
     
 def smartphone():
-	afford= money()
-	use= rely()
-	superRandom= random1()
-	password= security()
-	calA= cal(afford,use,superRandom,password)
 	if calA <=3:
 		return "Nokia 3310"
 	if calA <=6:
@@ -114,13 +111,7 @@ d. a pattern
 	else:
 		return random.random()
 
-def random2():
-	if afford != use or use =! password
-		return random.randint(1,35)/3
-	if afford == use and use == password
-		return 5
-	if afford > use or use < password
-		return 10
+
 	
 def output(Name,phone,sp):
 	out = """
