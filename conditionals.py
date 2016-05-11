@@ -1,33 +1,35 @@
+#this text game will help you determine which phone is best for you by answering 3 questions. So from this the program will use the input to calculate the phone that is best for he/she. 
 import random
 
 def main():
     Name= raw_input("Your name:")
-    Gender = raw_input ("Your gender")
     phone= raw_input ("Your current phone:")
     sp= smartphone()
-    print sp
+    p= output(Name,phone,sp)
+    print p
 
 
-def cal(a,b,c):
-    return  a+b+c
+def cal(a,b,c,d):
+    return  a+b+c+d
 
     
 def smartphone():
 	afford= money()
 	use= rely()
 	superRandom= random1()
-	calC= cal(afford,use,superRandom)
-	if calC <=2:
-		return "The phone that suit you is Nokia 3310"
-	elif calC <=4:
-		return "The phone that suit you is Iphone6s"
-	elif calC <= 6:
-		return "The phone that suit you is Samsung s7"
-	elif calC <= 8:
-		return "The phone that suit you is Samsung a7"
-	elif calC >= 100:
-		return "The phone that suit you is Samsung Note5"
-	elif calC >=1000:
+	password= security()
+	calA= cal(afford,use,superRandom,password)
+	if calA <=4:
+		return "Nokia 3310"
+	if calA <=6:
+		return " Iphone6s"
+	if calA <= 8:
+		return " Samsung s7"
+	if calA <= 9:
+		return " Samsung a7"
+	if calA >= 10:
+		return " Samsung Note5"
+	if calA >= 1000:
 		return "Use whatever you want"
 
 def rely():
@@ -70,6 +72,28 @@ d. I rather got it for free
     else:
         random.randint(1,4)
 
+def security():
+	security= raw_input("""
+What do you preferred for phone security
+a. fingerprint
+b. passwords
+c. none, simple slider
+d. a pattern
+(type a,b,c,d):
+	""")
+	if security == "a":
+		return 3
+	if security == "b":
+		return 2
+	if security == "c":
+		return 0
+	if security == "d":
+		return 3
+	else:
+		return random.random()
+
+
+
 def random1():
 	random1= raw_input("""
 How do you want to calculate your result?
@@ -79,18 +103,23 @@ c. don't use random
 d. Whatever
 (type a,b,c,d):
 		""")
-	if random1== "a":
+	if random1== "a"or "b":
 		return random.random()/20
-	if random1 == "b":
+	elif random1 == "c" or "d":
 		return random.randint(1,90)/7
-	if random1== "c":
-		return 3
-	if random1== "d":
-		return random.random()
 	else:
 		return random.randint(1,4)
 
 
-
+def output(Name,phone,sp):
+	out = """
+Hello {}, 
+You are currently using {}.
+This program will help you to decide to buy a phone that best suit for you.
+From the test that you take
+The result is {}. 
+""". format(Name,phone,sp)
+	return out
 
 main()
+
