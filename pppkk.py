@@ -18,6 +18,7 @@ def cal(afford,use,superRandom,password,randomA):
 
     
 def smartphone():
+	calA= cal(afford,use,superRandom,password,randomA)
 	if calA <=3:
 		return "Nokia 3310"
 	if calA <=6:
