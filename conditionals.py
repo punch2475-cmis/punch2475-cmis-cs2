@@ -2,11 +2,12 @@
 import random
 
 def main():
-    Name= raw_input("Your name:")
-    phone= raw_input ("Your current phone:")
-    sp= smartphone()
-    p= output(Name,phone,sp)
-    print p
+	Name= raw_input("Your name:")
+	phone= raw_input ("Your current phone:")
+	sp= smartphone()
+	b1=out()
+	p=output(Name,phone,b1,sp)
+	print p
 
 
 def cal(a,b,c,d):
@@ -27,7 +28,7 @@ def smartphone():
 		return " Samsung s7"
 	if calA <= 9:
 		return " Samsung a7"
-	if calA >= 10:
+	if calA > 10:
 		return " Samsung Note5"
 	if calA >= 1000:
 		return "Use whatever you want"
@@ -43,11 +44,11 @@ d. use for SNS(social network site)
         """)
     if rely== "a":
         return 1
-    if rely== "b":
+    elif rely== "b":
         return 2
-    if rely== "c":
+    elif rely== "c":
         return 3
-    if rely== "d":
+    elif rely== "d":
         return 4
     else:
         random.randint(1,4)
@@ -61,14 +62,8 @@ c. money is not my problem
 d. I rather got it for free
 (type a,b,c,d):
         """)
-    if money== "a":
-        return 1
-    if money== "b":
-        return 2
-    if money== "c":
-        return 3
-    if money == "d":
-        return 4
+    if money== "a" or "b" or "c" or "d":
+        return random.randint(1,3)
     else:
         random.randint(1,4)
 
@@ -83,11 +78,11 @@ d. a pattern
 	""")
 	if security == "a":
 		return 3
-	if security == "b":
+	elif security == "b":
 		return 2
-	if security == "c":
+	elif security == "c":
 		return 0
-	if security == "d":
+	elif security == "d":
 		return 3
 	else:
 		return random.random()
@@ -103,22 +98,35 @@ c. don't use random
 d. Whatever
 (type a,b,c,d):
 		""")
-	if random1== "a"or "b":
-		return random.random()/20
-	elif random1 == "c" or "d":
-		return random.randint(1,90)/7
+	if random1== "a"or "b" or "c" or "d":
+		return random.random()/2
 	else:
 		return random.randint(1,4)
 
+def bool1():
+	bool1=("""
+Do you think your phone suit you?
+(type y or n):
+		""")
+	if bool1 == "y":
+		return True
+	else:
+		return False
+def out():
+	if bool1== True:
+		return "I think my current phone suits me."
+	else:
+		return "I don't think my current phone suits me."
 
-def output(Name,phone,sp):
+def output(Name,phone,b1,sp):
 	out = """
 Hello {}, 
 You are currently using {}.
-This program will help you to decide to buy a phone that best suit for you.
-From the test that you take
+This program will help you to decide to buy a phone that best suits you.
+{}
+From the test that you took
 The result is {}. 
-""". format(Name,phone,sp)
+""". format(Name,phone,b1,sp)
 	return out
 
 main()
