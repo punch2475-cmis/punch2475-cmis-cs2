@@ -5,13 +5,13 @@ def main():
 	Name= raw_input("Your name:")
 	phone= raw_input ("Your current phone:")
 	sp= smartphone()
-	b1=out()
-	p=output(Name,phone,b1,sp)
+	cp= currentPhone()
+	p=output(Name,phone,cp,sp)
 	print p
 
 
-def cal(a,b,c,d):
-    return  a+b+c+d
+def calculation(afford,use,superRandom,password):
+    return  afford,use,superRandom,password
 
     
 def smartphone():
@@ -19,19 +19,19 @@ def smartphone():
 	use= rely()
 	superRandom= random1()
 	password= security()
-	calA= cal(afford,use,superRandom,password)
-	if calA <=4:
+	phoneModel = calculation(afford,use,superRandom,password)
+	if phoneModel <=3:
 		return "Nokia 3310"
-	if calA <=6:
+	if phoneModel <=5:
 		return " Iphone6s"
-	if calA <= 8:
+	if phoneModel <= 8:
 		return " Samsung s7"
-	if calA <= 9:
+	if phoneModel <= 10:
 		return " Samsung a7"
-	if calA > 10:
+	if phoneModel < 11:
 		return " Samsung Note5"
-	if calA >= 1000:
-		return "Use whatever you want"
+	if phoneModel > 12:
+		return "Samsung Note4"
 
 def rely():
     rely= raw_input("""
@@ -62,7 +62,7 @@ c. money is not my problem
 d. I rather got it for free
 (type a,b,c,d):
         """)
-    if money== "a" or "b" or "c" or "d":
+    if money== "a" and "b" and "c" and "d":
         return random.randint(1,3)
     else:
         random.randint(1,4)
@@ -76,13 +76,9 @@ c. none, simple slider
 d. a pattern
 (type a,b,c,d):
 	""")
-	if security == "a":
-		return 3
-	elif security == "b":
-		return 2
-	elif security == "c":
+	if not security == "a" or security == "d":
 		return 0
-	elif security == "d":
+	elif security == "a" and "d":
 		return 3
 	else:
 		return random.random()
@@ -103,30 +99,25 @@ d. Whatever
 	else:
 		return random.randint(1,4)
 
-def bool1():
-	bool1=("""
+def currentPhone():
+	currentPhone=raw_input("""
 Do you think your phone suit you?
 (type y or n):
 		""")
-	if bool1 == "y":
+	if currentPhone == "y":
 		return True
 	else:
 		return False
-def out():
-	if bool1== True:
-		return "I think my current phone suits me."
-	else:
-		return "I don't think my current phone suits me."
 
-def output(Name,phone,b1,sp):
+def output(Name,phone,cp,sp):
 	out = """
 Hello {}, 
 You are currently using {}.
 This program will help you to decide to buy a phone that best suits you.
-{}
+I think my current phone suit me: {}
 From the test that you took
 The result is {}. 
-""". format(Name,phone,b1,sp)
+""". format(Name,phone,cp,sp)
 	return out
 
 main()
