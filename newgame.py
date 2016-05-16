@@ -15,5 +15,14 @@ def guess():
 		print "too high"
 	guess()
 
+def number_round():
+	if number_round == 0:
+		return "Out of round"
+	else:
+		return guess()
 
-guess()
+def main():
+	number_round = 3
+	number_tries = 5
+	
+
