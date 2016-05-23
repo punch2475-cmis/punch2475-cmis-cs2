@@ -10,11 +10,11 @@
 #The first thing to consider when designing a recusive function is the base case which is 
 #
 #
-# 4) How do we put data into a function call?
+# 4) How do we put data into a function call? x
 #
 #put it to variable for example p= output()
 # 
-# 5) How do we get data out of a function call?
+# 5) How do we get data out of a function call? 
 #
 # return or print
 #
@@ -37,7 +37,7 @@
 
 #d1 = 6
 #d2 = 8
-#d3 = 2
+#d3 = 2 x
 
 #Section 3: Programming
 #Write a script that asks the user to enter a series of numbers.
@@ -46,6 +46,16 @@
 #In your code for the script, add a comment labeling the base case  on the line BEFORE the base case.
 #Also add a comment label BEFORE the recursive case.
 #It is NOT NECESSARY to print out a running total with each user input.
+
+#Grading:
+# +2 base case is present (MUST BE LABELED)
+# +2 recursive case is present (MUST BE LABELED)
+# -1 base case returns sum/ct (or equivalent)
+# -2 recursive case filters even numbers
+# -1 recursive case increments sum and ct correctly
+# -1 recursive case returns correct recursive call
+# -1 main function present AND called  
+
 def type1():
     n= raw_input("Next: ")
     if n == "":
@@ -59,14 +69,15 @@ def odd(n):
     else: 
         return n
 
-def avgOfodd():
+#def avgOfodd():
 
 def main():
     t= type1()
     odd1= odd(n)
-    
+
+
 def output():
     """ The average of odd number is{}""". format(avgOfodd)
     
-    
+ 
 
