@@ -54,7 +54,7 @@
 # -2 recursive case filters even numbers
 # -1 recursive case increments sum and ct correctly
 # -1 recursive case returns correct recursive call
-# -1 main function present AND called  
+# +1 main function present AND called  
 
 def type1():
     n= raw_input("Next: ")
