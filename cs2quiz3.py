@@ -75,7 +75,7 @@ def main():
     t= type1()
     odd1= odd(n)
 
-
+main()
 def output():
     """ The average of odd number is{}""". format(avgOfodd)
     
