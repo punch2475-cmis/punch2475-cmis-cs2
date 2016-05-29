@@ -1,54 +1,68 @@
 import random
 
-def guess1(tries, target):
+def guess1(tries=5, number=0):
     if tries == 5:
-        target = random.randint(0,100)
+        number = random.randint(0,100)
+        raw_input("Let's start you have 5 tries:")
     if tries == 0:
-        print "You suck at this"
+        print "You Suck"
         return False
     else:
-        guess = float(raw_input("Guess a number: "))
-        if guess == target:
+        target = float(raw_input("Guess a number: "))
+        if target == number:
             print "Correct!"
-        elif guess < target:
+            return True
+        elif target < number:
             print "Too low"
-            return guess1(tries-1, target)
+            return guess1(tries-1, number)
         else:
             print "Too high"
-            return guess1(tries-1, target)
-def guess2(tries):
-        random3= random.randint(0,100)
-        if tries >=1:
-                print "I guess {}." .format(random3)
-                result= raw_input("(H)igh, (L)ow, (C)orrect")
-                if result == "C":
-                    print "Awesome"
-                elif result == "H":
-                    print "Too high"
-                    return guess2(tries -1)
-                else:
-                    print "Too low"
-                    return guess2(tries -1)
-                if tries == 0:
-                    print "T_T"
-                else: 
-                    guess2(tries-1)
-            
-def rounds(number_rounds,tries,target):
-    if number_rounds == 0:
-        print "Done"
+            return guess1(tries-1, number)
+
+def guess2(tries=5,target=0):
+    if tries == 5:
+        print "5 tries to go!"
+    if tries == 0:
+        print "Computer, you suck at this"
+        return False
     else:
-        number_rounds = 2
-        print "You have", (number_rounds-1),"round left"
-        return guess1(tries-1, target) 
+        if tries == 1:
+            target = random.randint(0, 100)
+        else:
+            target = random.randint(0,100)
+        result = raw_input(("Computer's guess: {} (c, l, or h)".format(target)))
+        if result == "c":
+            print "Correct"
+            return True
+        elif result == "l":
+            print "Too low"
+            return guess2(tries-1,target)
+        else:
+            print "Too high"
+            return guess2(tries-1,target)
+
+            
+def rounds(number_rounds, guess1_score, guess2_score):
+    if number_rounds == 0:
+        if guess1_score > guess2_score:
+            winner = "You"
+        elif guess1_score < guess2_score:
+            winner = "Computer"
+        elif guess1_score == guess2_score:
+            winner = "No one"
+        print "{} wins!".format(winner)
+    else:
+        if guess1()==True:
+            guess1_score += 1
+        if guess2() == True:
+            guess2_score += 1
+        return rounds(number_rounds - 1, guess1_score, guess2_score)
 
 def main():
-    tries= 5
-    target=0
     number_rounds=3
-    guess1(tries,target)
-    guess2(tries)
-    rounds(number_rounds,tries,target)
+    guess1_score =0
+    guess2_score =0
+    rounds(number_rounds,guess1_score,guess2_score)
 
 main()
 
