@@ -30,11 +30,11 @@ def guess2(tries=5,target=0):
             target = random.randint(0, 100)
         else:
             target = random.randint(0,100)
-        result = raw_input(("Computer's guess: {} (c, l, or h)".format(target)))
-        if result == "c":
+        result = raw_input(("Computer's guess: {} ((C)orrect, (L)ow, or (H)igh)".format(target)))
+        if result == "C":
             print "Correct"
             return True
-        elif result == "l":
+        elif result == "L":
             print "Too low"
             return guess2(tries-1,target)
         else:
