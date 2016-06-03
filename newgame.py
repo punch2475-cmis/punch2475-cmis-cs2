@@ -50,6 +50,7 @@ def rounds(number_rounds, guess1_score, guess2_score):
             winner = "Computer"
         elif guess1_score == guess2_score:
             winner = "No one"
+        print "Computer score: {} Human score: {}".format(guess1_score, guess2_score)
         print "{} wins!".format(winner)
     else:
         if guess1()==True:
